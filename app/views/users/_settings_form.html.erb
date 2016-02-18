@@ -1,0 +1,73 @@
+<h1>settings form</h1>
+<!--
+  <%= form_for(user) do |f| %>
+      <% if user.errors.any? %>
+        <div id = "error_explanation">
+          <h2> <%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% user.errors.full_messages.each do |msg| %>
+              <li><%= msg %> </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    <div class="form-field-wrapper">
+      <div class = "name">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+    <% if logged_in? %>
+      <div class="form-field-wrapper">
+        <div class = "avatar">
+          <%= f.label :avatar %>
+          <%= f.file_field :avatar, :class => 'input-sm form-full' %>
+        </div>
+      </div>
+    <%end%>
+
+    <div class="form-field-wrapper">
+      <div class = "email">
+        <%= f.label :email %>
+        <%= f.text_field :email, :id => 'signup-email', :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+    <% if logged_in? %>
+      <div class="form-field-wrapper">
+        <div class = "position">
+          <%= f.label :position %>
+          <%= f.text_field :position, :class => 'input-sm form-full' %>
+        </div>
+      </div>
+    <%end%>
+
+    <% if logged_in? %>
+      <div class="form-field-wrapper">
+        <div class = "bio">
+          <%= f.label :bio %>
+          <%= f.text_area :bio, :class => 'input-sm form-full' %>
+        </div>
+      </div>
+    <%end%>
+
+    <div class="form-field-wrapper">
+      <div class = "password">
+        <%= f.label :password %>
+        <%= f.password_field :password, :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+    <div class="form-field-wrapper">
+      <div class = "password_confirmation">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, :class => 'input-sm form-full' %>
+      </div>
+    </div>
+
+      <div class= "actions">
+        <%= f.submit "submit", :class => 'btn btn-md btn-black' %>
+      </div>
+  <% end %> -->

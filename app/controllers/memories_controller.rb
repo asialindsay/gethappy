@@ -1,4 +1,4 @@
-class MemoryController < ApplicationController
+class MemoriesController < ApplicationController
 
   layout false
   def index

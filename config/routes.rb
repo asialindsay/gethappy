@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  root "memory#index"
+  root "welcome#homepage"
 
   # get 'memory/index'
   # get 'memory/hello'
-  match ':controller(/:action(/:id))', :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,9 +1,9 @@
 class MemoriesController < ApplicationController
 
   layout false
-  def index
-    # render('hello') - often used with if/else e.g. for logging in
-  end
+  # def index
+  #   # render('hello') - often used with if/else e.g. for logging in
+  # end
 
   # def hello
   # end

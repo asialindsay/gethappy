@@ -1,0 +1,13 @@
+<%= form_tag sessions_path do %>
+  <div class="email">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, "", :class => 'input-sm form-full' %>
+  </div>
+
+  <div class="password">
+    <%= label_tag :password %>
+    <%= password_field_tag :password, "", :class => 'input-sm form-full' %>
+  </div>
+
+  <%= submit_tag "SIGN IN", :class => 'btn btn-md btn-black' %>
+<% end %>

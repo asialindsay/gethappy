@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$font-family-sans-serif: "Georgia", Helvetica, Arial, sans-serif;
+$brand-primary: #53C1B8;
+$brand-success: #6A4E46;
+$brand-warning: #C61D83;
+
+.center_div{
+    margin: auto;
+    width: 90%
+}

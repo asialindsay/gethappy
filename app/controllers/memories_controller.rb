@@ -17,7 +17,7 @@ class MemoriesController < ApplicationController
   #   redirect_to('http://www.lynda.com')
   # end
 
-  def new
+    def new
       @memory = Memory.new
     end
 
@@ -38,10 +38,6 @@ class MemoriesController < ApplicationController
 
     def show
       @memory = Memory.find(params[:id])
-    #   @hash = Gmaps4rails.build_markers (@restaurant) do |restaurant, marker|
-    #    marker.lat restaurant.latitude
-    #    marker.lng restaurant.longitude
-    #  end
     end
 
     private

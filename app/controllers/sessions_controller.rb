@@ -12,6 +12,9 @@ class SessionsController < ApplicationController
     end
   end
 
+  def user_signed_in?
+  end
+
   def new
     if logged_in?
       redirect_to homepage_path

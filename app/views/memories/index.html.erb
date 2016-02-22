@@ -1,6 +1,6 @@
 <h4>Past happiness</h4>
   <!-- <hr> -->
     <% @memories.each do |memory|%>
-    <li><span class="bold-text">Date</span><%= memory.time.strftime("%B %d at %I:%M %p")%></li>
+    <li><span class="bold-text">Date</span><%= memory.created_at.strftime("%B %d at %I:%M %p")%></li>
     <li><span class="bold-text"></span> <%=memory.memory_text%></li>
     <%end%>

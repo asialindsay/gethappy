@@ -8,20 +8,18 @@
   <div>
     <!-- <%# form_tag(action: "memories", method: "post", role: "form") do %> -->
     <%# form_tag "/memories" do %>
-    <%= form_for @memory do |f| %>
+    <%= form_tag '/memories' do %>
     <div class="col-xmd-8">
+    <div class="form-group">
+        <%= text_field_tag "memories[]", nil, placeholder: ":-)", class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= text_field_tag "memories[]", nil, placeholder: ":-)  :-)", class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= text_field_tag "memories[]", nil, placeholder: ":-)  :-)  :-)", class: "form-control" %>
+    </div>
 
-    <div class="form-group">
-        <%= f.text_field :memory_text, placeholder: ":-)", class: "form-control"%>
-    </div>
-    <div class="form-group">
-      <label for="memory2"></label>
-      <input type="memory" class="form-control" placeholder=":-)  :-)" id="memory2">
-    </div>
-    <div class="form-group">
-      <label for="memory3"></label>
-      <input type="memory" class="form-control" placeholder=":-)  :-)  :-)" id="memory3">
-    </div>
     <button type="submit" class="btn btn-default">Submit</button>
   <% end %>
   </div>

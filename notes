@@ -1,0 +1,17 @@
+An app where you can track 3 daily happy memories
+  On the home page there's a form. You enter 3 memories, and save them
+  <Welcome#homepage renders the form>
+  <Check if they're logged in before submitting the form>
+    The Form has a text input that collects the memory up to 500 characters
+      <form_tag that has 3 input_tags, and a submit_tag>
+      name="person" # => {person: "whatever"}
+      name="person[name]" # => {person: {name: "whatever"}}
+      name="person[hobbies][]" #=> {person: {hobbies: ["whatever"]}}
+      name="person[hobbies][]" #=> {person: {hobbies: ["whatever","next thing"]}}
+      name="person[hobbies][]" #=> {person: {hobbies: ["whatever","next thing", "last"]}}
+      When you press 'save', it sends the memories to the app (Controller#action), then
+      sends you to a summary of memories for that day
+      <Memory Model, saving 3 of them. Have to use form_tag to collect the memories>
+      <In Memories#create params[:memories].each ... Create a memory>
+
+      <Associate the memory to the logged in user

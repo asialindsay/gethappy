@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+Session message: <%= session[:message] %>
+Cookie message: <%= cookies[:beef] %>
 
 <%= yield %>
 

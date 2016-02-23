@@ -22,10 +22,14 @@ class MemoriesController < ApplicationController
     end
 
     def create
-      @memory = Memory.create(memory_params)
-      @memory.users << current_user
-      @memory.save
-      redirect_to @memory
+
+      # @memory = Memory.create(memory_params)
+      ## @memory.users << current_user
+      # @memory.save
+      params[:memories].each do |memory|
+        Memory.create(:memory_text => memory)
+      end
+      redirect_to memories_path
     end
 
     def index

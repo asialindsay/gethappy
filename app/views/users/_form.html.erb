@@ -1,17 +1,15 @@
-<h2>Sign up!</h2>
-
-<!-- Code from bootstrap
-<form role="form">
-  <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email">
+<div class="col-md-6">
+    <div class="border-box">
+        <h2>Sign up</h2>
+        <p>Please enter your email address to create an account.</p>
+<%= form_tag('/sessions') do%>
+  <div class="email">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, "", :class => 'input-sm form-full' %>
   </div>
-  <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
+  <div class="password">
+    <%= label_tag :password %>
+    <%= password_field_tag :password, "", :class => 'input-sm form-full' %>
   </div>
-  <div class="checkbox">
-    <label><input type="checkbox"> Remember me</label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> -->
+  <%= submit_tag "SIGN UP", :class => 'btn btn-md btn-black' %>
+<%end%>

@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<% if flash[:error] %>
+  <div>Error<%= flash[:error] %></div>
+<% end %>
+
+<% if flash[:notice] %>
+  <div><%= flash[:notice] %></div>
+<% end %>
+<% if signed_in? %>
+Current user is: <%= current_user.first_name %>
+<% else  %>
+<%= link_to "Sign up", new_registration_path %>
+<%= link_to "Sign in", new_session_path %>
+<% end %>
+
 <%= yield %>
 
 <%= render 'layouts/user_widget' %>

@@ -4,4 +4,7 @@ class RegistrationsController < ApplicationController
   def new
     User.new
   end
+
+  def create
+  end
 end

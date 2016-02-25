@@ -2,14 +2,23 @@
     <div class="border-box">
         <h2>Sign up</h2>
         <p>Please enter your email address to create an account.</p>
-<%= form_tag('/sessions') do%>
+<%= form_for user do |f|%>
+  <div class="first_name">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :class => 'input-sm form-full' %>
+  </div>
+  <div class="last_name">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, :class => 'input-sm form-full' %>
+  </div>
+
   <div class="email">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, "", :class => 'input-sm form-full' %>
+    <%= f.label :email %>
+    <%= f.text_field :email, :class => 'input-sm form-full' %>
   </div>
   <div class="password">
-    <%= label_tag :password %>
-    <%= password_field_tag :password, "", :class => 'input-sm form-full' %>
+    <%= f.label :password %>
+    <%= f.password_field :password, :class => 'input-sm form-full' %>
   </div>
-  <%= submit_tag "SIGN UP", :class => 'btn btn-md btn-black' %>
+  <%= f.submit "SIGN UP", :class => 'btn btn-md btn-black' %>
 <%end%>

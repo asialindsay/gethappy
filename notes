@@ -15,3 +15,26 @@ An app where you can track 3 daily happy memories
       <In Memories#create params[:memories].each ... Create a memory>
 
       <Associate the memory to the logged in user
+
+
+Sessions
+/sessions/new => login form
+SessionsController#new
+  views/sessions/new.html.erb
+POST to /sessions
+
+/registrations/new => Signup form
+POST to /registrations
+
+Steven's code in sessions/_form.html.erb
+<%= form_for @user, url: sessions_path do |f| %>
+<div class="">
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</div>
+<div class="">
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+<%= f.submit %>
+<% end %>

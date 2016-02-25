@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to homepage_path, :notice => "Welcome back, #{user.name}"
+      redirect_to root_path, :notice => "Welcome back #{user.first_name}"
     else
       flash[:notice] = "Invalid email or password"
       render "new"
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def new
-    if logged_in?
+    if user_signed_in?
       redirect_to homepage_path
     else
       @user = User.new

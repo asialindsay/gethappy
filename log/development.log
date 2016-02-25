@@ -9103,3 +9103,718 @@ Started GET "/assets/memory.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde4
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-23 11:29:23 -0500
+  [1m[36mUser Load (8.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  BEGIN
+  [1m[36mUser Exists (7.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (18.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (31.8ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('britney@britney.com') LIMIT 1
+  [1m[36mSQL (10.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Britney"], ["last_name", "Spears"], ["password_digest", "$2a$10$kDlt5SXK7L03v9yZdvtWWOWa5J4Uw8f5pH31TLJWAoAdyaC5exJVG"], ["email", "britney@britney.com"], ["created_at", "2016-02-23 21:07:04.578419"], ["updated_at", "2016-02-23 21:07:04.578419"]]
+  [1m[35m (3.4ms)[0m  COMMIT
+  [1m[36mUser Load (8.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/users" for ::1 at 2016-02-25 11:15:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (20.6ms)
+  Rendered layouts/_user_widget.html.erb (0.8ms)
+Completed 200 OK in 543ms (Views: 512.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/memory.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/application.self-dead236cc580d42833c569ac6702929991bdd58093c48ad2e556f1a242a79541.css?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/memory.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 11:15:03 -0500
+
+
+Started POST "/users" for ::1 at 2016-02-25 11:15:06 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1GTdJdWgPv81fl6L26Iqyfo+cjjkdUgymEj6wWedB1//4lnMtrKYOjE/kbGOlssQuD4J8C0mOB8csn+kX3ATjw==", "first_name"=>"britney", "last_name"=>"spears", "email"=>"britney@britney.com", "password"=>"[FILTERED]", "commit"=>"SIGN UP"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  app/controllers/users_controller.rb:52:in `user_params'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (94.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.5ms)
+
+
+Started POST "/users" for ::1 at 2016-02-25 11:26:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1GTdJdWgPv81fl6L26Iqyfo+cjjkdUgymEj6wWedB1//4lnMtrKYOjE/kbGOlssQuD4J8C0mOB8csn+kX3ATjw==", "first_name"=>"britney", "last_name"=>"spears", "email"=>"britney@britney.com", "password"=>"[FILTERED]", "commit"=>"SIGN UP"}
+Completed 400 Bad Request in 25ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  app/controllers/users_controller.rb:52:in `user_params'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (59.1ms)
+
+
+Started GET "/registrations/new" for ::1 at 2016-02-25 11:56:46 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered users/_form.html.erb (56.6ms)
+  Rendered registrations/new.html.erb within layouts/application (63.4ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
+     5: <%= form_for user do |f|%>
+     6:   <div class="first_name">
+     7:     <%= f.label :first_name %>
+     8:     <%= f.text_field :first_name, "", :class => 'input-sm form-full' %>
+     9:   </div>
+    10:   <div class="last_name">
+    11:     <%= f.label :last_name %>
+  app/views/users/_form.html.erb:8:in `block in _app_views_users__form_html_erb___4461746844173355928_2219877720'
+  app/views/users/_form.html.erb:5:in `_app_views_users__form_html_erb___4461746844173355928_2219877720'
+  app/views/registrations/new.html.erb:1:in `_app_views_registrations_new_html_erb__3745459368787230737_2219736840'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (50.5ms)
+
+
+Started GET "/registrations/new" for ::1 at 2016-02-25 11:57:15 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered users/_form.html.erb (8.0ms)
+  Rendered registrations/new.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
+     9:   </div>
+    10:   <div class="last_name">
+    11:     <%= f.label :last_name %>
+    12:     <%= f.text_field :last_name, "", :class => 'input-sm form-full' %>
+    13:   </div>
+    14: 
+    15:   <div class="email">
+  app/views/users/_form.html.erb:12:in `block in _app_views_users__form_html_erb___4461746844173355928_2233561180'
+  app/views/users/_form.html.erb:5:in `_app_views_users__form_html_erb___4461746844173355928_2233561180'
+  app/views/registrations/new.html.erb:1:in `_app_views_registrations_new_html_erb__3745459368787230737_2219736840'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.2ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (52.2ms)
+
+
+Started GET "/registrations/new" for ::1 at 2016-02-25 11:57:35 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered users/_form.html.erb (13.4ms)
+  Rendered registrations/new.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_user_widget.html.erb (0.2ms)
+Completed 200 OK in 143ms (Views: 142.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/memory.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/application.self-dead236cc580d42833c569ac6702929991bdd58093c48ad2e556f1a242a79541.css?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started GET "/assets/memory.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 11:57:35 -0500
+
+
+Started POST "/users" for ::1 at 2016-02-25 11:57:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rKf+bl2MKoyNkSAlIeZT0CQQobqX8vIMI08Cu7/wuYqHIXqHPp6MSYnQ7x900rIJZhDacl6hgiGntYfehx2tWg==", "user"=>{"first_name"=>"Steven", "last_name"=>"N", "email"=>"steven@isgreat.com", "password"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36m (5.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (48.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('steven@isgreat.com') LIMIT 1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Steven"], ["last_name", "N"], ["password_digest", "$2a$10$Lh6BGQFjprFLj6EmzpD4/.yiI5j3sPqgwNI.F3osIoiIvjclS2efe"], ["email", "steven@isgreat.com"], ["created_at", "2016-02-25 16:57:51.254075"], ["updated_at", "2016-02-25 16:57:51.254075"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 75.8ms)
+
+NameError (undefined local variable or method `dashboard_path' for #<UsersController:0x00000108c5d4c0>):
+  app/controllers/users_controller.rb:21:in `create'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.1ms)
+
+
+Started POST "/users" for ::1 at 2016-02-25 11:58:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rKf+bl2MKoyNkSAlIeZT0CQQobqX8vIMI08Cu7/wuYqHIXqHPp6MSYnQ7x900rIJZhDacl6hgiGntYfehx2tWg==", "user"=>{"first_name"=>"Steven", "last_name"=>"N", "email"=>"steven@isgreat.com", "password"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('steven@isgreat.com') LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 32.8ms)
+
+ActionView::MissingTemplate (Missing template users/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/asialindsay/Desktop/Coding/Flatiron/get_happy/app/views"
+  * "/Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/devise-3.5.6/app/views"
+):
+  app/controllers/users_controller.rb:23:in `create'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (33.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (52.4ms)
+
+
+Started POST "/users" for ::1 at 2016-02-25 11:58:49 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rKf+bl2MKoyNkSAlIeZT0CQQobqX8vIMI08Cu7/wuYqHIXqHPp6MSYnQ7x900rIJZhDacl6hgiGntYfehx2tWg==", "user"=>{"first_name"=>"Steven", "last_name"=>"N", "email"=>"steven@isgreat.com", "password"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('steven@isgreat.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 4.7ms)
+
+ActionView::MissingTemplate (Missing template users/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/asialindsay/Desktop/Coding/Flatiron/get_happy/app/views"
+  * "/Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/devise-3.5.6/app/views"
+):
+  app/controllers/users_controller.rb:23:in `create'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (29.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (56.0ms)
+
+
+Started POST "/users" for ::1 at 2016-02-25 11:59:31 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rKf+bl2MKoyNkSAlIeZT0CQQobqX8vIMI08Cu7/wuYqHIXqHPp6MSYnQ7x900rIJZhDacl6hgiGntYfehx2tWg==", "user"=>{"first_name"=>"Steven", "last_name"=>"N", "email"=>"steven@isgreat.com", "password"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('steven@isgreat.com') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered registrations/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_user_widget.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 89.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.self-dead236cc580d42833c569ac6702929991bdd58093c48ad2e556f1a242a79541.css?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/memory.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/memory.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 11:59:31 -0500
+
+
+Started POST "/users" for ::1 at 2016-02-25 12:00:54 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3a71+/SsCPknGpMrnZvp+WIk67HnHIaJp67bxqlM35n2KHESl76uPCNbXBHIrwggICSQeS5P9qQjVF6jkaHLSQ==", "user"=>{"first_name"=>"James", "last_name"=>"Brown", "email"=>"james@james.com", "password"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('james@james.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "James"], ["last_name", "Brown"], ["password_digest", "$2a$10$ceGV/6bkg5tfUv5B2T5w1uHcTv1B9khAbuG.97yC5rCVHYBZYGDdK"], ["email", "james@james.com"], ["created_at", "2016-02-25 17:00:54.262199"], ["updated_at", "2016-02-25 17:00:54.262199"]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 105ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:00:54 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered memories/_form.html.erb (2.0ms)
+  Rendered welcome/homepage.html.erb within layouts/application (6.4ms)
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered layouts/_user_widget.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 109.7ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/sessions" for ::1 at 2016-02-25 12:01:06 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+FhvxypshY9guI07WA2C+97itLRefv6jxdznJTEIwVPT3usuSX4jSmT5QgENOWMinOLPfJctjo5BJmJACeXVgw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:01:06 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered memories/_form.html.erb (0.6ms)
+  Rendered welcome/homepage.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_user_widget.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-02-25 12:01:09 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/_registered_form.html.erb (1.4ms)
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_user_widget.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-02-25 12:01:17 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nzYbOGPvEsC59eP7Na0LmDbVoWJyeaOgSBPZR1z2CyS0sJ/RAP20Bb20LMFgmepBdNXaqrsq043M6VwiZBsf9A==", "email"=>"james@james.com", "password"=>"[FILTERED]", "commit"=>"SIGN IN"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "james@james.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:01:18 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered memories/_form.html.erb (0.6ms)
+  Rendered welcome/homepage.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered layouts/_user_widget.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:04:46 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered memories/_form.html.erb (2.3ms)
+  Rendered welcome/homepage.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_user_widget.html.erb (0.1ms)
+Completed 200 OK in 213ms (Views: 179.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/memory.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/application.self-dead236cc580d42833c569ac6702929991bdd58093c48ad2e556f1a242a79541.css?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/memory.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 12:04:47 -0500
+
+
+Started GET "/" for ::1 at 2016-02-25 12:07:04 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered memories/_form.html.erb (0.6ms)
+  Rendered welcome/homepage.html.erb within layouts/application (4.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `past_happiness_path' for #<#<Class:0x00000101e2e4b8>:0x0000010a2e6700>):
+    19: <% if logged_in? %>
+    20: Current user is: <%= current_user.first_name %>
+    21: <%= link_to "Log out", sessions_path, method: :delete %>
+    22: <%= link_to "Past happiness", past_happiness_path %>
+    23: <%= link_to "Settings", settings_path %>
+    24: <% else  %>
+    25: <%= link_to "Sign up", new_registration_path %>
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__1783671986702648304_2232792120'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:07:27 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered memories/_form.html.erb (0.8ms)
+  Rendered welcome/homepage.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 5.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"past_happiness"} missing required keys: [:id]):
+    19: <% if logged_in? %>
+    20: Current user is: <%= current_user.first_name %>
+    21: <%= link_to "Log out", sessions_path, method: :delete %>
+    22: <%= link_to "Past happiness", past_happiness_path %>
+    23: <%= link_to "Settings", settings_path %>
+    24: <% else  %>
+    25: <%= link_to "Sign up", new_registration_path %>
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__1783671986702648304_2232792120'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.1ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (47.8ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:08:39 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered memories/_form.html.erb (0.8ms)
+  Rendered welcome/homepage.html.erb within layouts/application (4.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 5.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"past_happiness"} missing required keys: [:id]):
+    19: <% if logged_in? %>
+    20: Current user is: <%= current_user.first_name %>
+    21: <%= link_to "Log out", sessions_path, method: :delete %>
+    22: <%= link_to "Past happiness", past_happiness_path %>
+    23: <%= link_to "Settings", settings_path %>
+    24: <% else  %>
+    25: <%= link_to "Sign up", new_registration_path %>
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__1783671986702648304_2232792120'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.8ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:09:28 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered memories/_form.html.erb (0.8ms)
+  Rendered welcome/homepage.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 4.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"past_happiness"} missing required keys: [:id]):
+    19: <% if logged_in? %>
+    20: Current user is: <%= current_user.first_name %>
+    21: <%= link_to "Log out", sessions_path, method: :delete %>
+    22: <%= link_to "Past happiness", past_happiness_path %>
+    23: <%= link_to "Settings", settings_path %>
+    24: <% else  %>
+    25: <%= link_to "Sign up", new_registration_path %>
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__1783671986702648304_2232792120'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 12:16:23 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered memories/_form.html.erb (4.6ms)
+  Rendered welcome/homepage.html.erb within layouts/application (12.0ms)
+  [1m[35mUser Load (7.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 7.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"past_happiness"} missing required keys: [:id]):
+    19: <% if logged_in? %>
+    20: Current user is: <%= current_user.first_name %>
+    21: <%= link_to "Log out", sessions_path, method: :delete %>
+    22: <%= link_to "Past happiness", past_happiness_path %>
+    23: <%= link_to "Settings", settings_path %>
+    24: <% else  %>
+    25: <%= link_to "Sign up", new_registration_path %>
+  app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__1783671986702648304_2232792120'
+
+
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.2ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/asialindsay/.rvm/gems/ruby-2.1.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (63.6ms)

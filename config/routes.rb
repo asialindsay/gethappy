@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :daysmemories
   resources :sessions, only: [:new, :create]
   delete "/sessions", to: "sessions#destroy"
-  resources :registrations, only: [:new, :create]
 
 
   # The priority is based upon order of creation: first created -> highest priority.

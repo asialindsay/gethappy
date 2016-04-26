@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, :notice => "Thank you for signing up!"
     else
-      render "registrations/new"
+      render "users/new"
     end
   end
 

@@ -22,7 +22,7 @@ Current user is: <%= current_user.first_name %>
 <%= link_to "Past happiness", memories_path %>
 <%= link_to "Settings", edit_user_path(current_user), :class => "edit-user" %>
 <% else  %>
-<%= link_to "Sign up", new_registration_path %>
+<%= link_to "Sign up", new_user_path %>
 <%= link_to "Sign in", new_session_path %>
 <% end %>
 
